@@ -15,6 +15,9 @@ $timetable-bg-color: white;
 $room-name-bg-color: white;
 $hours-bg-color: white;
 
+$quater-color: rgba(222,222,222,.2);
+$quater-color-light: rgba(222,222,222,.9);
+
 $row-height: 140px;
 
 $event-bg-color: darksalmon;
@@ -64,11 +67,11 @@ $event-bg-color: darksalmon;
    &__quater {
       flex-grow:1;
       //  border-right: 1px solid navy;
-      background-color: rgba(222,222,222,.2);
+      background-color: $quater-color;
    }
 
    &__quater:nth-of-type(2n) {
-      background-color: rgba(222,222,222,.9);
+      background-color: $quater-color-light;
    }
 
    &__event {
