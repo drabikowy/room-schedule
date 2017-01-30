@@ -3,50 +3,6 @@ let timelineEnd = 16;
 let timelineHours = timelineEnd-timelineStart;
 let minutePercent = 100/(timelineHours*60);
 
-
-class Timetable {
-   constructor(from, to, events) {
-      this.start = 10;
-      this.end = 16;
-      this.hours = this.end-this.start;
-      this.minutePercent = 100/(this.hours*60);
-      this.events = events;
-
-      this.renderTable();
-   }
-
-   addEvents()   {
-
-   }
-
-   renderTable(){
-      let timetable = document.querySelector('.timetable');
-      // row
-      let row = document.createElement('div');
-      row.classList.add("timetable__row");
-      // dayTime
-      let day = document.createElement('div');
-      day.classList.add("timetable__timeline");
-
-      // hours:
-      for (let i=0; i<this.hours; i++) {
-         let hour = document.createElement('div');
-         hour.classList.add('timeline__hours');
-
-         for (let y=0; y<4; y++){
-            let quater = document.createElement('div');
-            quater.classList.add("timeline__quater");
-            hour.appendChild(quater);
-         }
-         day.appendChild(hour);
-      }
-
-      row.appendChild(day);
-      timetable.appendChild(row);
-
-   }
-}
-
 class Event {
    constructor(startDate, endDate, title, author, participants){
       this.startDate = startDate;
@@ -82,6 +38,5 @@ class Event {
 
 }
 
-let timetable = new Timetable(10,16);
 let event = new Event(12.5,14, "Moje zdarzenie","Tomasz",["Aga","Kazek"]);
-let event2 = new Event(14.25,15, "Moje zdarzenie 2","Edward",["Kazek","Tomek"]);
+let event2 = new Event(14.15,15, "Moje zdarzenie 2","Edward",["Kazek","Tomek"]);

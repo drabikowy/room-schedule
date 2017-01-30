@@ -2,18 +2,18 @@
 
 
 * {
-  box-sizing:border-box;
+   box-sizing:border-box;
 }
 body {
-    height: 100vh;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+   height: 100vh;
+   display:flex;
+   justify-content: center;
+   align-items: center;
 }
 
-$timetable-bg-color: wheat;
-$room-name-bg-color: lightsalmon;
-$hours-bg-color: powderblue;
+$timetable-bg-color: white;
+$room-name-bg-color: white;
+$hours-bg-color: white;
 
 $row-height: 140px;
 
@@ -21,56 +21,64 @@ $event-bg-color: darksalmon;
 
 
 .timetable {
-  width: 90%;
+   width: 90%;
 
-  background-color: $timetable-bg-color;
+   background-color: $timetable-bg-color;
 
-  &__row {
-    display:flex;
-    flex-flow: row nowrap;
-  }
+   &__row {
+      display:flex;
+      flex-flow: row nowrap;
+   }
 
-  &__day{
-    display:flex;
-    position:relative;
-    height: $row-height;
-    flex-grow: 6;
-    background-color: $hours-bg-color;
-  }
+   &__timeline{
+      display:flex;
+      position:relative;
+      height: $row-height;
+      flex-grow: 6;
+      background-color: $hours-bg-color;
+   }
 }
 
-.day {
+.timeline {
 
-  &__hours {
-    display:flex;
-    position:relative;
-    background-color: rgba(255,255,255,.5);
-    flex-grow: 1;
+   &__hours {
+      display:flex;
+      position:relative;
+      background-color: rgba(255,255,255,.5);
+      flex-grow: 1;
 
-    &:after {
-      content: '';
-      border-right: 2px solid navy;
-    }
+      &:before {
+         content: '';
+         height: 115%;
+         position:relative;
+         top: -15%;
+         border-right: 1px solid navy;
+      }
 
-  }
-  &__hours-label {
+   }
+   &__hours-label {
       position:absolute;
       top: -20px;
-  }
+   }
 
-  &__minutes {
-    flex-grow:1;
-    border-right: 1px solid navy;
-  }
-}
+   &__quater {
+      flex-grow:1;
+      //  border-right: 1px solid navy;
+      background-color: rgba(222,222,222,.2);
+   }
 
-.event {
-  position:absolute;
-  z-index:1;
-  background-color: $event-bg-color;
-  align-self: center;
-  border-radius: 10px;
-  height:50%;
-  width: 20%;
-  left: 10%;
+   &__quater:nth-of-type(2n) {
+      background-color: rgba(222,222,222,.9);
+   }
+
+   &__event {
+      position:absolute;
+      z-index:1;
+      background-color: $event-bg-color;
+      align-self: center;
+      border-radius: 10px;
+      height:50%;
+      width: 20%;
+      left: 10%;
+   }
 }
