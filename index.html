@@ -1,104 +1,120 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-      <title>Calendar</title>
+<head>
+    <title>Calendar</title>
 
 
     <script type="text/javascript" src="googleApiLoader.js"></script>
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+    <!-- <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script> -->
 
     <link rel="stylesheet" href="/sass/timetable.min.css">
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <div id="authorize-div" style="display: none">
-      <span>Authorize access to Google Calendar API</span>
-      <!--Button for the user to click to initiate auth sequence -->
-      <button id="authorize-button" onclick="handleAuthClick(event)">
-        Authorize
-      </button>
+    <!-- <div id="authorize-div" style="display: none">
+    <span>Authorize access to Google Calendar API</span> -->
+    <!--Button for the user to click to initiate auth sequence -->
+    <!-- <button id="authorize-button" onclick="handleAuthClick(event)">
+    Authorize
+</button>
+</div>
+<pre id="output"></pre> -->
+
+
+<div class="timetable">
+    <div class="timetable__row">
+
+
+        <div class="timetable__day">
+            <div class="event"></div>
+            <div class="day__hours">
+                <div class="day__hours-label">
+                    10:00
+                </div>
+
+
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+            </div>
+            <div class="day__hours">
+                <div class="day__hours-label">
+                    11:00
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+            </div>
+            <div class="day__hours">
+                <div class="day__hours-label">
+                    12:00
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+            </div>
+            <div class="day__hours">
+                <div class="day__hours-label">
+                    13:00
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+            </div>
+            <div class="day__hours">
+                <div class="day__hours-label">
+                    14:00
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+            </div>
+            <div class="day__hours">
+                <div class="day__hours-label">
+                    15:00
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+                <div class="day__minutes">
+                </div>
+            </div>
+
+        </div>
     </div>
-    <pre id="output"></pre>
-
-
-    <div class="timetable">
-        <div class="timetable">
-  <div class="timetable__row">
-<!--     <div class="timetable__room-name">
-      Room name
-    </div> -->
-
-    <div class="timetable__day">
-      <div class="event"></div>
-      <div class="day__hours">
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-      </div>
-      <div class="day__hours">
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-      </div>
-      <div class="day__hours">
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-      </div>
-      <div class="day__hours">
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-      </div>
-      <div class="day__hours">
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-      </div>
-      <div class="day__hours">
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-        <div class="day__minutes">
-        </div>
-      </div>
-
-      </div>
-  </div>
 </div>
 
-    </div>
-  </body>
-  <script type="text/javascript" src="timetable.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+
+</body>
+<script type="text/javascript" src="app.js"></script>
 </html>

@@ -76,7 +76,7 @@ function checkAuth() {
                 'orderBy': 'startTime',
             });
             request.execute(function(resp) {
-                listEvents(resp);
+                // listEvents(resp);
             });
         }
 

@@ -1,0 +1,76 @@
+//
+
+
+* {
+  box-sizing:border-box;
+}
+body {
+    height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$timetable-bg-color: wheat;
+$room-name-bg-color: lightsalmon;
+$hours-bg-color: powderblue;
+
+$row-height: 140px;
+
+$event-bg-color: darksalmon;
+
+
+.timetable {
+  width: 90%;
+
+  background-color: $timetable-bg-color;
+
+  &__row {
+    display:flex;
+    flex-flow: row nowrap;
+  }
+
+  &__day{
+    display:flex;
+    position:relative;
+    height: $row-height;
+    flex-grow: 6;
+    background-color: $hours-bg-color;
+  }
+}
+
+.day {
+
+  &__hours {
+    display:flex;
+    position:relative;
+    background-color: rgba(255,255,255,.5);
+    flex-grow: 1;
+
+    &:after {
+      content: '';
+      border-right: 2px solid navy;
+    }
+
+  }
+  &__hours-label {
+      position:absolute;
+      top: -20px;
+  }
+
+  &__minutes {
+    flex-grow:1;
+    border-right: 1px solid navy;
+  }
+}
+
+.event {
+  position:absolute;
+  z-index:1;
+  background-color: $event-bg-color;
+  align-self: center;
+  border-radius: 10px;
+  height:50%;
+  width: 20%;
+  left: 10%;
+}
