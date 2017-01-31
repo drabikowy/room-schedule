@@ -65,7 +65,7 @@ class Event {
         this.title = title;
         this.author = author;
         this.participants = participants;
-        this.width = `${this.duration*minutePercent}%`;
+        this.height = `${this.duration*minutePercent}%`;
         this.position = `${(this.startMinutes - timelineStart*60)*minutePercent}%`;
         this.render();
 
@@ -80,17 +80,17 @@ class Event {
 
         let event = document.createElement('div');
         event.classList.add('timeline__event');
-        event.style.width = 0;
+        event.style.height = 0;
 
-        event.style.left=0;
+        event.style.top=0;
 
         event.innerText = this.title;
-        event.style.left = this.position;
+        event.style.top = this.position;
 
         timeline.appendChild(event);
 
         setTimeout( () => {
-            event.style.width = this.width;
+            event.style.height = this.height;
 
 
         },1);

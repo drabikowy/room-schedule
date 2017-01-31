@@ -20,23 +20,26 @@ $quater-color-light: rgba(222,222,222,.9);
 
 $row-height: 400px;
 
-$event-bg-color: darksalmon;
+$event-bg-color: powderblue;
 
 
 .timetable {
-   min-width: 100%;
-   height: 80%;
+   min-width: 40%;
+   height: 90vh;
    background-color: $timetable-bg-color;
 
    &__row {
       display:flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
+      height:inherit;
    }
 
    &__timeline{
       display:flex;
+      flex-flow: column nowrap;
       position:relative;
-      height: $row-height;
+      height: 100%;
+
       flex-grow: 6;
       background-color: $hours-bg-color;
    }
@@ -46,22 +49,26 @@ $event-bg-color: darksalmon;
 
    &__hours {
       display:flex;
+      flex-flow: column nowrap;
       position:relative;
       background-color: rgba(255,255,255,.5);
       flex-grow: 1;
 
       &:before {
          content: '';
-         height: 115%;
+         height: 100%;
          position:relative;
          top: -15%;
-         border-right: 1px solid navy;
+         border-top: 1px solid navy;
       }
 
    }
    &__hours-label {
+       font-size: 40px;
+       color: rgba(0,0,0,.3);
       position:absolute;
-      top: -20px;
+      top: 10px ;
+      left: 0;
    }
 
    &__quater {
@@ -78,10 +85,10 @@ $event-bg-color: darksalmon;
       position:absolute;
       z-index:1;
       background-color: $event-bg-color;
-      align-self: center;
-      border-radius: 10px;
+      align-self: flex-end;
+      border-radius: 8px;
       height:30%;
-      width: 20%;
+      width: 80%;
       left: 10%;
       overflow: visible;
       transition: all 1s ease;
